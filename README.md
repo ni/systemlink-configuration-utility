@@ -17,9 +17,9 @@ when managing the configuration of an NI SystemLink Server installation.
 
 ## Usage
 
-Placeholder
+See the [docs](docs) for documentation on usage of the utility.
 
-## Contributing to the connfiguration utility
+## Contributing
 
 See the [contributing guidelines](CONTRIBUTING.md) for how to set up and submit
 contributions to the configuration utility.
