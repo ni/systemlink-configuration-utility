@@ -24,7 +24,7 @@ def _get_version(name):
     script_dir = os.path.dirname(os.path.realpath(__file__))
     script_dir = os.path.join(script_dir, name)
     if not os.path.exists(os.path.join(script_dir, "VERSION")):
-        version = "0.1.1"
+        version = "0.1.0"
     else:
         with open(os.path.join(script_dir, "VERSION"), "r") as version_file:
             version = version_file.read().rstrip()
@@ -50,7 +50,7 @@ setup(
     url='https://github.com/ni/systemlink-configuration-utility',
     python_requires='>=3.7',
     install_requires=[],
-    tests_require=["pytest", "pytest-asyncio", "mypy"],
+    tests_require=["pytest", "pytest-asyncio"],
     classifiers=[
         "Intended Audience :: Developers",
         "Intended Audience :: Manufacturing",
