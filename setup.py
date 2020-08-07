@@ -1,46 +1,66 @@
-from pathlib import Path
-from setuptools import setup
+from setuptools import find_packages, setup  # type: ignore
+from setuptools.command.test import test as TestCommand  # type: ignore
 
 from slconf import __version__
 
-# Utility function to read the README file.
-# Used for the long_description.  It's nice, because now 1) we have a top level
-# README file and 2) it's easier to type in the README file than to put a raw
-# string in below ...
+
+class PyTest(TestCommand):
+    def finalize_options(self):
+        TestCommand.finalize_options(self)
+        self.test_args = []
+        self.test_suite = True
+
+    def run_tests(self):
+        import pytest  # type: ignore
+
+        pytest.main(self.test_args)
+
+pypi_name = "systemlink-configuration-utility"
+
+def _get_version(name):
+    import os
+
+    version = None
+    script_dir = os.path.dirname(os.path.realpath(__file__))
+    script_dir = os.path.join(script_dir, name)
+    if not os.path.exists(os.path.join(script_dir, "VERSION")):
+        version = "0.1.1"
+    else:
+        with open(os.path.join(script_dir, "VERSION"), "r") as version_file:
+            version = version_file.read().rstrip()
+    return version
+
+def _read_contents(file_to_read):
+    with open(file_to_read, "r") as f:
+        return f.read()
 
 
-def read(fname):
-    return open(Path(__file__).parent / fname).read()
-
-
-def read_requirements(filename):
-    with open(filename) as f:
-        return f.read().splitlines()
-
-
-settings = dict(
-    name='slconf',
-    packages=['slconf'],
-    version=__version__,
-    author='cameronwaterman',
-    author_email='cameron.waterman@ni.com',
+setup(
+    name=pypi_name,
+    version=_get_version(pypi_name),
     description='A command-line utility for managing SystemLink Server configurations',
-    license='MIT',
-    keywords='slconf',
-    url='https://github.com/ni/systemlink-configuration-utility',
-    long_description=read('README.md'),
+    long_description=_read_contents('README.md'),
     long_description_content_type='text/markdown',
+    author='NI',
+    maintainer='cameronwaterman',
+    maintainer_email='cameron.waterman@ni.com',
+    keywords=["nisystemlink", "systemlink"],
+    license='MIT',
+    packages=find_packages(exclude=["examples", "tests"]),
+    url='https://github.com/ni/systemlink-configuration-utility',
     python_requires='>=3.7',
-    install_requires=read_requirements('requirements.txt'),
-    tests_require=read_requirements('test-requirements.txt'),
+    install_requires=[],
+    tests_require=["pytest", "pytest-asyncio", "mypy"],
     classifiers=[
+        "Intended Audience :: Developers",
+        "Intended Audience :: Manufacturing",
+        "Intended Audience :: Science/Research",
+        "Operating System :: Microsoft :: Windows",
         'Topic :: Software Development :: Libraries :: Python Modules',
         'Programming Language :: Python :: 3.7',
         'Programming Language :: Python :: 3.8',
-        'Topic :: Software Development :: Libraries :: Python Modules',
-        'License :: OSI Approved :: MIT License',
-    ]
+        'License :: OSI Approved :: MIT License'
+    ],
+    cmdclass={"test": PyTest},
+    package_data={"": ["VERSION", "*.pyi", "py.typed"]}
 )
-
-if __name__ == '__main__':
-    setup(**settings)

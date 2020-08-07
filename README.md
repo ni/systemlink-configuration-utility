@@ -1,9 +1,9 @@
 # SystemLink Configuration Utility
 
-This repository contains a command line utility for IT professionals to use
-when managing the configuration of an NI SystemLink Server installation.
+The *systemlink-configuration-utility* package contains a command line utility for IT professionals to use
+when managing the configuration of an NI [SystemLink Server](https://ni.com/systemlink) installation.
 
-## Prerequisites
+## Requirements
 
 ### SystemLink
 - This utility assumes SystemLink Server version 2020R3 or later.
@@ -22,4 +22,4 @@ See the [docs](docs) for documentation on usage of the utility.
 ## Contributing
 
 See the [contributing guidelines](CONTRIBUTING.md) for how to set up and submit
-contributions to the configuration utility.
+contributions to the *systemlink-configuration-utility*.

@@ -20,8 +20,8 @@ import datetime
 # -- Project information -----------------------------------------------------
 
 project = 'slconf'
-copyright = f'20220-{datetime.date.today().year}, cameronwaterman< and contributors'
-author = 'cameronwaterman <>'
+copyright = f'2020-{datetime.date.today().year}, NI'
+author = 'NI'
 
 
 # -- General configuration ---------------------------------------------------

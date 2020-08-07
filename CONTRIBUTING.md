@@ -1,12 +1,12 @@
-# Contributing to SystemLink Configuration Utility
+# Contributing to *systemlink-configuration-utility*
 
-Contributions to SystemLink Configuration Utility are welcome from all!
+Contributions to *systemlink-configuration-utility* Utility are welcome from all!
 
-systemlink-configuration-utility is managed via [git](https://git-scm.com), with
+*systemlink-configuration-utility* is managed via [git](https://git-scm.com), with
 the canonical upstream repository hosted on
 [GitHub](https://github.com/ni/systemlink-configuration-utility).
 
-systemlink-configuration-utility follows a pull-request model for development. If
+*systemlink-configuration-utility* follows a pull-request model for development. If
 you wish to contribute, you will need to create a GitHub account, fork this
 project, push a branch with your changes to your project, and then submit a
 pull request.
@@ -45,4 +45,4 @@ for more details.
 (taken from [developercertificate.org](https://developercertificate.org/))
 
 See [LICENSE](https://github.com/ni/systemlink-configuration-utility/blob/master/LICENSE)
-for details about how systemlink-configuration-utility is licensed.
+for details about how *systemlink-configuration-utility* is licensed.
