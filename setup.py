@@ -1,8 +1,6 @@
 from setuptools import find_packages, setup  # type: ignore
 from setuptools.command.test import test as TestCommand  # type: ignore
 
-from slconf import __version__
-
 
 class PyTest(TestCommand):
     def finalize_options(self):

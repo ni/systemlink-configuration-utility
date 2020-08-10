@@ -7,7 +7,7 @@ when managing the configuration of an NI [SystemLink Server](https://ni.com/syst
 
 ### SystemLink
 - This utility assumes SystemLink Server version 2020R3 or later.
-- This utility assume a single-box SystemLink installation.
+- This utility assumes a single-box SystemLink installation.
 - This utility is designed to run on the same machine as the SystemLink Server installation. It does not support remote migration.
 
 ### Python
