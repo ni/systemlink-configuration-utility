@@ -37,7 +37,7 @@ setup(
     name=pypi_name,
     version=_get_version(pypi_name),
     description='A command-line utility for managing SystemLink Server configurations',
-    long_description=_read_contents('README.md'),
+    long_description=_read_contents('README.rst'),
     long_description_content_type='text/markdown',
     author='NI',
     maintainer='cameronwaterman',
