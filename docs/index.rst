@@ -1,5 +1,5 @@
-systemlink.configuration.utility
-####################
+systemlink.configuration
+########################
 
 .. contents::
    :local:
@@ -9,9 +9,6 @@ User Documentation
 
 .. toctree::
    :maxdepth: 3
-
-   getting_started
-   api_reference
 
 Package Info
 ************

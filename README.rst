@@ -16,7 +16,7 @@ when managing the configuration of an NI `SystemLink Server <https://ni.com/syst
 .. _requirements_section:
 
 Requirements
-=====
+============
 **systemlink-configuration-utility** has the following requirements:
 
 * A SystemLink Server installation
@@ -35,6 +35,6 @@ See the `docs <docs>`_ for documentation on usage of the utility.
 .. _contributing_section:
 
 Contributing
-=====
+============
 See the `contributing guideline <CONTRIBUTING.md>`_ for how to set up and submit
 contributions to the *systemlink-configuration-utility*.
