@@ -13,7 +13,7 @@ class PyTest(TestCommand):
 
         pytest.main(self.test_args)
 
-pypi_name = "systemlink-configuration-utility"
+pypi_name = "nisystemlink-configuration"
 
 def _get_version(name):
     import os
