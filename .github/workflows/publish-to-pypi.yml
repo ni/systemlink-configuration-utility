@@ -7,7 +7,7 @@ on:
 
 jobs:
   build-and-publish:
-    if: github.repository == 'ni/nisystemlink-configuration'
+    if: github.repository == 'ni/systemlink-configuration-utility'
     runs-on: ubuntu-latest
 
     steps:
